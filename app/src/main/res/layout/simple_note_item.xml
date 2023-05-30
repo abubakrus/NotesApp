@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:singleLine="true"
+            android:textSize="13sp"
+            android:layout_marginTop="24sp"
+            tools:text="@tools:sample/lorem"/>
+
+        <TextView
+            android:id="@+id/descripition_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:maxLines="6"
+            android:textSize="8sp"
+            android:fontFamily="@font/poppins"
+            tools:text="@tools:sample/lorem/random"/>
+        <TextView
+            android:id="@+id/last_edited_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="24sp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins"
+            android:singleLine="true"
+            android:textSize="6sp"
+            android:text="Last edited: 17.12.2021 18:06"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
