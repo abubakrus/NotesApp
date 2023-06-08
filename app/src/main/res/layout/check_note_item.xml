@@ -26,11 +26,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <CheckBox
+                android:id="@+id/first_check_box"
                 android:layout_width="25dp"
                 android:scaleX="0.60"
                 android:scaleY="0.60"
                 android:layout_height="20dp"/>
             <TextView
+                android:id="@+id/first_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -43,11 +45,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <CheckBox
+                android:id="@+id/second_check_box"
                 android:layout_width="25dp"
                 android:scaleX="0.60"
                 android:scaleY="0.60"
                 android:layout_height="20dp"/>
             <TextView
+                android:id="@+id/second_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -60,11 +64,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <CheckBox
+                android:id="@+id/third_check_box"
                 android:layout_width="25dp"
                 android:scaleX="0.60"
                 android:scaleY="0.60"
                 android:layout_height="20dp"/>
             <TextView
+                android:id="@+id/third_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -77,11 +83,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <CheckBox
+                android:id="@+id/four_check_box"
                 android:layout_width="25dp"
                 android:scaleX="0.60"
                 android:scaleY="0.60"
                 android:layout_height="20dp"/>
             <TextView
+                android:id="@+id/fourth_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -94,11 +102,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <CheckBox
+                android:id="@+id/fifth_check_box"
                 android:layout_width="25dp"
                 android:scaleX="0.60"
                 android:scaleY="0.60"
                 android:layout_height="20dp"/>
             <TextView
+                android:id="@+id/fifth_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -111,11 +121,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <CheckBox
+                android:id="@+id/sixth_check_box"
                 android:layout_width="25dp"
                 android:scaleX="0.60"
                 android:scaleY="0.60"
                 android:layout_height="20dp"/>
             <TextView
+                android:id="@+id/sixth_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"

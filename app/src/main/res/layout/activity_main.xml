@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
@@ -22,6 +23,7 @@
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="37dp"
+        android:iconifiedByDefault="false"
         android:background="@drawable/search_view_background"
         android:queryHint="@string/find_your_notes" />
     <androidx.recyclerview.widget.RecyclerView
@@ -29,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="16dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:spanCount="2"
         tools:listitem="@layout/check_note_item"/>
 </LinearLayout>

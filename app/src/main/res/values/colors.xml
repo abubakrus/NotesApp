@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="border_color">#6692D4</color>
+    <color name="rectangle_one_color">#FCE0E0</color>
+    <color name="rectangle_two_color">#D1EFC3</color>
+    <color name="rectangle_three_color">#D4D1F0</color>
+    <color name="rectangle_four_color">#FCF5E0</color>
+    <color name="rectangle_five_color">#262FF8F8</color>
 </resources>
