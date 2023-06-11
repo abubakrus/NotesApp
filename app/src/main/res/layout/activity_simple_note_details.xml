@@ -52,23 +52,27 @@
         </LinearLayout>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/title_text_view"
+    <EditText
+        android:id="@+id/title_edit_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:textColor="@color/black"
         android:textSize="24sp"
+        android:hint="Input title"
+        android:backgroundTint="@android:color/transparent"
         android:fontFamily="@font/poppins_medium"
         tools:text="@tools:sample/lorem"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"/>
-    <TextView
-        android:id="@+id/descripition_text_view"
+    <EditText
+        android:id="@+id/description_edit_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="16sp"
+        android:hint="Input description"
+        android:backgroundTint="@android:color/transparent"
         android:fontFamily="@font/poppins"
         tools:text="@tools:sample/lorem/random"
         android:maxLines="4"/>

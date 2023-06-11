@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"/>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
+            android:id="@+id/mainFloatingActionButton"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_plus"/>
 

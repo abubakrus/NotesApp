@@ -3,6 +3,7 @@ package com.example.notesapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.notesapp.databinding.ActivityCheckNoteDetailsBinding
+import com.example.notesapp.db.Database
 import com.example.notesapp.models.Note
 
 class CheckNoteDetailsActivity : AppCompatActivity() {
@@ -14,10 +15,33 @@ class CheckNoteDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
         val note = intent.extras?.getSerializable(NOTE_KEY) as? com.example.notesapp.models.Note
         initViews(note)
+        val database = Database(this)
+        binding.checkNoteButtonSaveChanges.setOnClickListener{
+            database.updateCheckNote(
+                oldNote = note!!,
+                title = binding.titleEditView.text.toString(),
+                isCheckedList = listOf(
+                    binding.firstCheckBox.isChecked,
+                    binding.secondCheckBox.isChecked,
+                    binding.thirdCheckBox.isChecked,
+                    binding.fourthCheckBox.isChecked,
+                    binding.fifthCheckBox.isChecked,
+                    binding.firstCheckBox.isChecked,
+                ),
+                titles = listOf(
+                    binding.firstCheckBoxEdit.text.toString(),
+                    binding.secondCheckBoxEdit.text.toString(),
+                    binding.thirdCheckBoxEdit.text.toString(),
+                    binding.fourthCheckBoxEdit.text.toString(),
+                    binding.fifthCheckBoxEdit.text.toString(),
+                    binding.sixthCheckBoxEdit.text.toString(),
+                )
+            )
+        }
     }
     private fun initViews(note: Note?){
         if (note == null) return
-        binding.titleTextView.text = note.title
+        binding.titleEditView.setText(note.title)
         binding.lastEditedTextView.text = "last edited:" + note.lastEditedDate.toString()
         if (note.checkBoxIsCheckedList.isNotEmpty()){
             binding.firstCheckBox.isChecked = note.checkBoxIsCheckedList[0]
@@ -29,7 +53,7 @@ class CheckNoteDetailsActivity : AppCompatActivity() {
             binding.thirdCheckBox.isChecked = note.checkBoxIsCheckedList[2]
         }
         if (note.checkBoxIsCheckedList.isNotEmpty()){
-            binding.fourCheckBox.isChecked = note.checkBoxIsCheckedList[3]
+            binding.fourthCheckBox.isChecked = note.checkBoxIsCheckedList[3]
         }
         if (note.checkBoxIsCheckedList.isNotEmpty()){
             binding.fifthCheckBox.isChecked = note.checkBoxIsCheckedList[4]
@@ -38,22 +62,22 @@ class CheckNoteDetailsActivity : AppCompatActivity() {
             binding.sixthCheckBox.isChecked = note.checkBoxIsCheckedList[5]
         }
         if(note.checkBoxTilesList.isNotEmpty()){
-            binding.firstCheckBoxTitle.text = note.checkBoxTilesList[0]
+            binding.firstCheckBoxEdit.setText(note.checkBoxTilesList[0])
         }
         if(note.checkBoxTilesList.isNotEmpty()){
-            binding.secondCheckBoxTitle.text = note.checkBoxTilesList[1]
+            binding.secondCheckBoxEdit.setText(note.checkBoxTilesList[1])
         }
         if(note.checkBoxTilesList.isNotEmpty()){
-            binding.thirdCheckBoxTitle.text = note.checkBoxTilesList[2]
+            binding.thirdCheckBoxEdit.setText(note.checkBoxTilesList[2])
         }
         if(note.checkBoxTilesList.isNotEmpty()){
-            binding.fourthCheckBoxTitle.text = note.checkBoxTilesList[3]
+            binding.fourthCheckBoxEdit.setText(note.checkBoxTilesList[3])
         }
         if(note.checkBoxTilesList.isNotEmpty()){
-            binding.fifthCheckBoxTitle.text = note.checkBoxTilesList[4]
+            binding.fifthCheckBoxEdit.setText(note.checkBoxTilesList[4])
         }
         if(note.checkBoxTilesList.isNotEmpty()){
-            binding.sixthCheckBoxTitle.text = note.checkBoxTilesList[5]
+            binding.sixthCheckBoxEdit.text = note.checkBoxTilesList[5]
         }
     }
 }
