@@ -1,5 +1,6 @@
 package com.example.notesapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.notesapp.databinding.ActivitySimpleNoteDetailsBinding
@@ -23,6 +24,7 @@ class SimpleNoteDetailsActivity : AppCompatActivity() {
                 description = binding.descriptionEditView.text.toString()
             )
         }
+        binding.imageBackspace.setOnClickListener{navigateBackToMainActivity()}
     }
     private fun initViews(note: Note?){
         if (note == null) return
@@ -30,6 +32,9 @@ class SimpleNoteDetailsActivity : AppCompatActivity() {
         binding.descriptionEditView.setText(note.description)
         binding.lastEditedTextView.text = "Last edited:" + note.lastEditedDate.toString()
     }
-
+    private fun navigateBackToMainActivity(){
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
 }
 

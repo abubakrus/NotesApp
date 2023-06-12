@@ -1,5 +1,6 @@
 package com.example.notesapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.notesapp.databinding.ActivityCheckNoteDetailsBinding
@@ -38,6 +39,7 @@ class CheckNoteDetailsActivity : AppCompatActivity() {
                 )
             )
         }
+        binding.imageBackspace.setOnClickListener { navigateBackToMainActivity() }
     }
     private fun initViews(note: Note?){
         if (note == null) return
@@ -79,5 +81,9 @@ class CheckNoteDetailsActivity : AppCompatActivity() {
         if(note.checkBoxTilesList.isNotEmpty()){
             binding.sixthCheckBoxEdit.text = note.checkBoxTilesList[5]
         }
+    }
+    private fun navigateBackToMainActivity(){
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }
